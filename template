@@ -2,7 +2,6 @@
   "id": "f6541798-3b2c-4100-bcae-76d1cb181f3b",
   "version": "2.0",
   "name": "Financial Remedy",
-  "temp": "new",
   "url": "http://localhost:3000/",
   "tests": [{
     "id": "e1bcb0c7-2529-4a4b-9523-67b94047312f",
@@ -34,48 +33,6 @@
         ["xpath=//li[2]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Create case')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "5430d99f-67a1-4d6f-9e06-ded7db80e595",
-      "comment": "",
-      "command": "do",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "30b85790-5feb-464e-b03b-65be9c06e69d",
-      "comment": "",
-      "command": "executeScript",
-      "target": "return document.querySelector('a.govuk-link--no-visited-state')",
-      "targets": [],
-      "value": "hideMessage"
-    }, {
-      "id": "eccf8ecd-5469-4a06-a23c-57c7ea0082d9",
-      "comment": "",
-      "command": "if",
-      "target": "${hideMessage} !== null",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "2dd6c9a8-1f47-4f8e-b68e-344228b22573",
-      "comment": "",
-      "command": "executeScript",
-      "target": "document.querySelector('a.govuk-link--no-visited-state').click()",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1f2d2fa5-b163-41cb-8ebd-4ebd85c991c1",
-      "comment": "",
-      "command": "end",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ace78517-fddc-47b6-889e-b95192221ba0",
-      "comment": "",
-      "command": "repeatIf",
-      "target": "${hideMessage} !== null",
-      "targets": [],
       "value": ""
     }, {
       "id": "8aeee569-c459-43c5-80c4-f3418469cc85",
@@ -363,7 +320,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "1234567890123456"
+      "value": "LV18J81000"
     }, {
       "id": "bdf4e607-db5e-4778-a936-56880eff9b3e",
       "comment": "",
@@ -501,7 +458,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "x"
+      "value": "The Local Divorce Court"
     }, {
       "id": "8f0ff6af-66ef-435d-a0fd-158c1d542512",
       "comment": "",
@@ -736,14 +693,14 @@
       "command": "storeText",
       "target": "xpath=//select[@id='applicantAddress_applicantAddress_addressList']/option[2]",
       "targets": [],
-      "value": "applicantSolicitorAddress"
+      "value": "applicantAddress"
     }, {
       "id": "6e298cfb-1a65-4dc7-b8db-c43c212ecbf7",
       "comment": "",
       "command": "select",
       "target": "id=applicantAddress_applicantAddress_addressList",
       "targets": [],
-      "value": "${applicantSolicitorAddress}"
+      "value": "${applicantAddress}"
     }, {
       "id": "18b3c604-cac9-457d-b5bc-0325a68d2327",
       "comment": "",
@@ -929,7 +886,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "Respondent Solicitors"
+      "value": "Respondent Solicitor Firm"
     }, {
       "id": "b2bfd882-77c9-4ac2-a6cd-c901a480aa43",
       "comment": "",
@@ -957,7 +914,7 @@
         ["xpath=//div[@id='rSolicitorAddress_rSolicitorAddress_postcodeLookup']/input", "xpath:idRelative"],
         ["xpath=//div/div/div/input", "xpath:position"]
       ],
-      "value": "SW2"
+      "value": "{{respondent-solicitor-postcode}}"
     }, {
       "id": "703dadbf-f53d-4669-b7de-0bc442479716",
       "comment": "",
@@ -1202,7 +1159,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[6]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "£1.5"
+      "value": "10p"
     }, {
       "id": "24e2fada-acdd-4d9c-9682-c42706feed94",
       "comment": "",
@@ -1255,16 +1212,16 @@
       "command": "select",
       "target": "id=regionList",
       "targets": [],
-      "value": "label=North West"
+      "value": "label={{local-court-region}}"
     }, {
       "id": "fd902f0e-aa7b-4bea-8c16-c57302248c20",
       "comment": "",
       "command": "click",
-      "target": "id=northWestFRCList",
+      "target": "id={{local-court-frc-id}}",
       "targets": [
-        ["id=northWestFRCList", "id"],
-        ["css=#northWestFRCList", "css:finder"],
-        ["xpath=//select[@id='northWestFRCList']", "xpath:attributes"],
+        ["id={{local-court-frc-id}}", "id"],
+        ["css=#{{local-court-frc-id}}", "css:finder"],
+        ["xpath=//select[@id='{{local-court-frc-id}}']", "xpath:attributes"],
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
         ["xpath=//div[4]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:position"]
       ],
@@ -1273,18 +1230,18 @@
       "id": "d99b8d92-b057-48df-bbe1-bc34238e6f5d",
       "comment": "",
       "command": "select",
-      "target": "id=northWestFRCList",
+      "target": "id={{local-court-frc-id}}",
       "targets": [],
-      "value": "label=Lancashire and Cumbria FRC"
+      "value": "label={{local-court-frc}}"
     }, {
       "id": "b50a378f-2f8b-44c3-aafd-16fa886e5336",
       "comment": "",
       "command": "click",
-      "target": "id=lancashireCourtList",
+      "target": "id={{local-court-id}}",
       "targets": [
-        ["id=lancashireCourtList", "id"],
-        ["css=#lancashireCourtList", "css:finder"],
-        ["xpath=//select[@id='lancashireCourtList']", "xpath:attributes"],
+        ["id={{local-court-id}}", "id"],
+        ["css=#{{local-court-id}}", "css:finder"],
+        ["xpath=//select[@id='{{local-court-id}}']", "xpath:attributes"],
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[17]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
         ["xpath=//div[17]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:position"]
       ],
@@ -1293,9 +1250,9 @@
       "id": "65d9e298-b107-465a-b28c-3772ceb6b68c",
       "comment": "",
       "command": "select",
-      "target": "id=lancashireCourtList",
+      "target": "id={{local-court-id}}",
       "targets": [],
-      "value": "label=CARLISLE COMBINED COURT"
+      "value": "label={{local-court}}"
     }, {
       "id": "43ae714d-8c66-4339-9637-7288c0321307",
       "comment": "",
@@ -1440,7 +1397,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "x"
+      "value": "4564GRE"
     }, {
       "id": "d1ee3062-79f8-46b6-8bb6-bea06fb5df0b",
       "comment": "",
@@ -1466,7 +1423,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "x"
+      "value": "Potatoes"
     }, {
       "id": "70952630-789e-42ab-8e73-f8a25744f1b1",
       "comment": "",
@@ -1492,7 +1449,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "x"
+      "value": "Warble"
     }, {
       "id": "c22485b1-fb58-422c-a32f-9012fa5c4f5d",
       "comment": "",

@@ -36,6 +36,10 @@ echo -n "Enter respondent solicitor's email (default: fr_respondent_solicitor1@m
 read -r respondentSolicitorEmail
 if [[ $respondentSolicitorEmail = "" ]]; then respondentSolicitorEmail="fr_respondent_solicitor1@mailinator.com"; fi
 
+echo -n "Enter respondent's solicitor postcode (default: NW5 1UN): "
+read -r respondentSolicitorPostcode
+if [[ $respondentSolicitorPostcode = "" ]]; then respondentSolicitorPostcode="NW5 1UN"; fi
+
 echo -n "Enter respondent's first name (default: John): "
 read -r respondentFirstName
 if [[ $respondentFirstName = "" ]]; then respondentFirstName="John"; fi
@@ -44,29 +48,76 @@ echo -n "Enter respondent's last name (default: Smith): "
 read -r respondentLastName
 if [[ $respondentLastName = "" ]]; then respondentLastName="Smith"; fi
 
-echo -n "Enter respondent's postcode (default: NW5 1UN): "
-read -r respondentPostcode
-if [[ $respondentPostcode = "" ]]; then respondentPostcode="NW5 1UN"; fi
-
-echo -n "Enter divorce evidence upload PDF file including full path: "
+echo -n "Enter divorce evidence upload file including full path (default: $HOME/Documents/test.pdf): "
 read -r divorceEvidenceUploadFile
+if [[ $divorceEvidenceUploadFile = "" ]]; then divorceEvidenceUploadFile="$HOME/Documents/test.pdf"; fi
+
+echo "Select applicant's local court:"
+echo "1: Birmingham Civil and Family Justice Centre"
+echo "2: East London Family Court"
+echo "3: Mold County"
+echo "4: Carlisle Combined Court"
+echo -n "Enter selection (default: 1) [1..4] "
+read -r courtSelection
+
+if [[ -z $courtSelection || $courtSelection = 1 ]]; then
+  region="Midlands"
+  frcId="midlandsFRCList"
+  frc="Birmingham FRC"
+  courtId="birminghamCourtList"
+  court="BIRMINGHAM CIVIL AND FAMILY JUSTICE CENTRE"
+fi
+
+if [[ $courtSelection = 2 ]]; then
+  region="London"
+  frcId="londonFRCList"
+  frc="London FRC"
+  courtId="cfcCourtList"
+  court="EAST LONDON FAMILY COURT"
+fi
+
+if [[ $courtSelection = 3 ]]; then
+  region="Wales"
+  frcId="walesFRCList"
+  frc="North Wales FRC"
+  courtId="northWalesCourtList"
+  court="Mold County"
+fi
+
+if [[ $courtSelection = 4 ]]; then
+  region="North West"
+  frcId="northWestFRCList"
+  frc="Lancashire and Cumbria FRC"
+  courtId="lancashireCourtList"
+  court="CARLISLE COMBINED COURT"
+fi
+
+echo -n "Enter file to create (default: financial-remedy.side): "
+read -r filename
+if [[ $filename = "" ]]; then filename="financial-remedy.side"; fi
 
 dir=$(dirname "$0")
 
-cp "$dir"/templates/financial-remedy-template ./financial-remedy.side
+cp "$dir"/template ./"$filename"
 
-sed -i '' -e "s/{{applicant-solicitor-name}}/$applicantSolicitorName/g" financial-remedy.side
-sed -i '' -e "s/{{applicant-solicitor-organisation}}/$applicantSolicitorOrganisation/" financial-remedy.side
-sed -i '' -e "s/{{applicant-solicitor-email}}/$applicantSolicitorEmail/" financial-remedy.side
-sed -i '' -e "s/{{applicant-first-name}}/$applicantFirstName/" financial-remedy.side
-sed -i '' -e "s/{{applicant-last-name}}/$applicantLastName/" financial-remedy.side
-sed -i '' -e "s/{{applicant-postcode}}/$applicantPostcode/" financial-remedy.side
+sed -i '' -e "s/{{applicant-solicitor-name}}/$applicantSolicitorName/g" "$filename"
+sed -i '' -e "s/{{applicant-solicitor-organisation}}/$applicantSolicitorOrganisation/" "$filename"
+sed -i '' -e "s/{{applicant-solicitor-email}}/$applicantSolicitorEmail/" "$filename"
+sed -i '' -e "s/{{applicant-first-name}}/$applicantFirstName/" "$filename"
+sed -i '' -e "s/{{applicant-last-name}}/$applicantLastName/" "$filename"
+sed -i '' -e "s/{{applicant-postcode}}/$applicantPostcode/" "$filename"
 
-sed -i '' -e "s/{{respondent-solicitor-name}}/$respondentSolicitorName/" financial-remedy.side
-sed -i '' -e "s/{{respondent-solicitor-organisation}}/$respondentSolicitorOrganisation/" financial-remedy.side
-sed -i '' -e "s/{{respondent-solicitor-email}}/$respondentSolicitorEmail/" financial-remedy.side
-sed -i '' -e "s/{{respondent-first-name}}/$respondentFirstName/" financial-remedy.side
-sed -i '' -e "s/{{respondent-last-name}}/$respondentLastName/" financial-remedy.side
-sed -i '' -e "s/{{respondent-postcode}}/$respondentPostcode/" financial-remedy.side
+sed -i '' -e "s/{{respondent-solicitor-name}}/$respondentSolicitorName/" "$filename"
+sed -i '' -e "s/{{respondent-solicitor-organisation}}/$respondentSolicitorOrganisation/" "$filename"
+sed -i '' -e "s/{{respondent-solicitor-email}}/$respondentSolicitorEmail/" "$filename"
+sed -i '' -e "s/{{respondent-solicitor-postcode}}/$respondentSolicitorPostcode/" "$filename"
+sed -i '' -e "s/{{respondent-first-name}}/$respondentFirstName/" "$filename"
+sed -i '' -e "s/{{respondent-last-name}}/$respondentLastName/" "$filename"
 
-sed -i '' -e "s~{{divorce-evidence-upload-file}}~$divorceEvidenceUploadFile~" financial-remedy.side
+sed -i '' -e "s~{{divorce-evidence-upload-file}}~$divorceEvidenceUploadFile~" "$filename"
+
+sed -i '' -e "s/{{local-court-region}}/$region/" "$filename"
+sed -i '' -e "s/{{local-court-frc-id}}/$frcId/" "$filename"
+sed -i '' -e "s/{{local-court-frc}}/$frc/" "$filename"
+sed -i '' -e "s/{{local-court-id}}/$courtId/" "$filename"
+sed -i '' -e "s/{{local-court}}/$court/" "$filename"
