@@ -2,6 +2,7 @@
   "id": "f6541798-3b2c-4100-bcae-76d1cb181f3b",
   "version": "2.0",
   "name": "Financial Remedy",
+  "temp": "new",
   "url": "http://localhost:3000/",
   "tests": [{
     "id": "e1bcb0c7-2529-4a4b-9523-67b94047312f",
@@ -209,7 +210,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "Lionel Hutz"
+      "value": "{{applicant-solicitor-name}}"
     }, {
       "id": "948d65f2-0991-4878-8d3e-d66eecd3e6d8",
       "comment": "",
@@ -235,7 +236,7 @@
         ["xpath=//div[@id='ApplicantOrganisationPolicy_ApplicantOrganisationPolicy']/fieldset/ccd-field-write[2]/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
         ["xpath=//fieldset/div/input", "xpath:position"]
       ],
-      "value": "FinRem-1-Org"
+      "value": "{{applicant-solicitor-organisation}}"
     }, {
       "id": "125f5a03-20d0-4f5e-b3e5-b366d8ef2118",
       "comment": "",
@@ -546,7 +547,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
         ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
       ],
-      "value": "/Users/james.turnbull/Documents/test.pdf"
+      "value": "{{divorce-evidence-upload-file}}"
     }, {
       "id": "37b387e2-df5f-457d-8c0d-be6c804817c8",
       "comment": "",
@@ -660,7 +661,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "Doris"
+      "value": "{{applicant-first-name}}"
     }, {
       "id": "1d189432-95c3-41ca-b76d-e69bc90fdc14",
       "comment": "",
@@ -673,7 +674,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "Duck"
+      "value": "{{applicant-last-name}}"
     }, {
       "id": "0177c851-fb00-41c4-a11c-beea0ff6232c",
       "comment": "",
@@ -701,7 +702,7 @@
         ["xpath=//div[@id='applicantAddress_applicantAddress_postcodeLookup']/input", "xpath:idRelative"],
         ["xpath=//div/div/input", "xpath:position"]
       ],
-      "value": "SW1"
+      "value": "{{applicant-postcode}}"
     }, {
       "id": "61578923-24a0-4602-8ecf-e9ac1b94c792",
       "comment": "",
@@ -801,7 +802,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "Davey"
+      "value": "{{respondent-first-name}}"
     }, {
       "id": "4bc1f169-b92d-4176-8abd-0455b0eeaf6e",
       "comment": "",
@@ -827,7 +828,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "Duck"
+      "value": "{{respondent-last-name}}"
     }, {
       "id": "908bbbfa-99ae-49a8-90c1-fde926396784",
       "comment": "",
@@ -887,7 +888,7 @@
         ["xpath=//div[@id='RespondentOrganisationPolicy_RespondentOrganisationPolicy']/fieldset/ccd-field-write/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
         ["xpath=//fieldset/div/input", "xpath:position"]
       ],
-      "value": "FinRem-2-Org"
+      "value": "{{respondent-solicitor-organisation}}"
     }, {
       "id": "16a92ed0-b72e-4623-b1b5-082bacd8e287",
       "comment": "",
@@ -1062,7 +1063,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:idRelative"],
         ["xpath=//div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:position"]
       ],
-      "value": "fr_respondent_solicitor1@mailinator.com"
+      "value": "{{respondent-solicitor-email}}"
     }, {
       "id": "be2adef5-4400-40ec-93a6-a16c977cefed",
       "comment": "",
@@ -1654,7 +1655,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "Lionel Hutz"
+      "value": "{{applicant-solicitor-name}}"
     }, {
       "id": "6fe21bea-b73c-4a37-ab58-5b38baba53c2",
       "comment": "",
@@ -1680,7 +1681,7 @@
         ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
         ["xpath=//div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
       ],
-      "value": "I Can't Believe It's A Law Firm"
+      "value": "Applicant Solicitor Firm"
     }, {
       "id": "3b7a9909-c33c-4c13-8db6-6750833c93eb",
       "comment": "",
