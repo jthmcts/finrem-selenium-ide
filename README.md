@@ -27,3 +27,5 @@ You will be prompted to enter some values that will be embedded into the generat
 A new browser window will open and the Selenium IDE will input the values to create a case.
 
 Once the case has been created the case number will be shown in a popup.
+
+Note you can enter preview PR URLs into the dropdown list to create cases in that environment.
