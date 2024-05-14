@@ -1124,15 +1124,7 @@
       "id": "41f7a64b-4c08-4fe0-8541-698345700f1a",
       "comment": "",
       "command": "click",
-      "target": "id=estimatedAssetsChecklist-estimatedAssetsChecklist_1",
-      "targets": [
-        ["id=estimatedAssetsChecklist-estimatedAssetsChecklist_1", "id"],
-        ["name=estimatedAssetsChecklist", "name"],
-        ["css=#estimatedAssetsChecklist-estimatedAssetsChecklist_1", "css:finder"],
-        ["xpath=//input[@id='estimatedAssetsChecklist-estimatedAssetsChecklist_1']", "xpath:attributes"],
-        ["xpath=//div[@id='estimatedAssetsChecklist']/fieldset/div/input", "xpath:idRelative"],
-        ["xpath=//ccd-write-multi-select-list-field/div/fieldset/div/input", "xpath:position"]
-      ],
+      "target": "id=estimatedAssetsChecklistV2-overFifteenMillionPounds",
       "value": ""
     }, {
       "id": "bfbb0656-b363-48fa-a20f-5cc0fcb9b57b",
