@@ -1246,6 +1246,19 @@
       "targets": [],
       "value": "label={{local-court}}"
     }, {
+      "id": "8910b60e-ccf4-4590-a807-49d87ca8c924",
+      "comment": "",
+      "command": "click",
+      "target": "id=allocatedToBeHeardAtHighCourtJudgeLevel_No",
+      "targets": [
+        ["id=allocatedToBeHeardAtHighCourtJudgeLevel_No", "id"],
+        ["css=#allocatedToBeHeardAtHighCourtJudgeLevel_No", "css:finder"],
+        ["xpath=//input[@id='allocatedToBeHeardAtHighCourtJudgeLevel_No']", "xpath:attributes"],
+        ["xpath=//div[@id='allocatedToBeHeardAtHighCourtJudgeLevel_radio']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
       "id": "43ae714d-8c66-4339-9637-7288c0321307",
       "comment": "",
       "command": "click",
