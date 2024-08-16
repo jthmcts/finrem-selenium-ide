@@ -54,7 +54,7 @@ if [[ $divorceEvidenceUploadFile = "" ]]; then divorceEvidenceUploadFile="$HOME/
 
 echo "Select applicant's local court:"
 echo "1: Birmingham Civil and Family Justice Centre"
-echo "2: East London Family Court"
+echo "2: Liverpool Civil and Family Court"
 echo "3: Mold County"
 echo "4: Carlisle Combined Court"
 echo -n "Enter selection (default: 1) [1..4] "
@@ -69,11 +69,11 @@ if [[ -z $courtSelection || $courtSelection = 1 ]]; then
 fi
 
 if [[ $courtSelection = 2 ]]; then
-  region="London"
-  frcId="londonFRCList"
-  frc="London FRC"
-  courtId="cfcCourtList"
-  court="EAST LONDON FAMILY COURT"
+  region="North West"
+  frcId="northWestFRCList"
+  frc="Liverpool FRC"
+  courtId="liverpoolCourtList"
+  court="LIVERPOOL CIVIL AND FAMILY COURT"
 fi
 
 if [[ $courtSelection = 3 ]]; then

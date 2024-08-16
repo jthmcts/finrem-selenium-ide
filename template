@@ -5,7 +5,7 @@
   "url": "http://localhost:3000/",
   "tests": [{
     "id": "e1bcb0c7-2529-4a4b-9523-67b94047312f",
-    "name": "Create Contested",
+    "name": "Create Contested Solicitor",
     "commands": [{
       "id": "de983dee-cb78-4e6e-b5cf-5e495f66bf70",
       "comment": "",
@@ -1890,7 +1890,1441 @@
       "targets": [],
       "value": ""
     }]
-  }],
+  },
+    {
+      "id": "794a4c76-0d71-4808-a5bd-237665a0936a",
+      "name": "Create Consented Solicitor",
+      "commands": [{
+        "id": "926a23c2-668e-484f-bbe0-bc8b4a97a089",
+        "comment": "",
+        "command": "open",
+        "target": "/cases",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "4ba8a36d-a87a-4343-b529-00b809dd6eab",
+        "comment": "",
+        "command": "setWindowSize",
+        "target": "1920x970",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "d030006c-d357-4e7e-8144-7239621e8a4e",
+        "comment": "",
+        "command": "click",
+        "target": "linkText=Create case",
+        "targets": [
+          ["linkText=Create case", "linkText"],
+          ["css=.hmcts-primary-navigation__item:nth-child(2) > .hmcts-primary-navigation__link", "css:finder"],
+          ["xpath=//a[contains(text(),'Create case')]", "xpath:link"],
+          ["xpath=//a[contains(@href, '/cases/case-filter')]", "xpath:href"],
+          ["xpath=//li[2]/a", "xpath:position"],
+          ["xpath=//a[contains(.,'Create case')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "ee291653-2cb0-4c31-9ccd-367d657f3ae3",
+        "comment": "",
+        "command": "waitForElementPresent",
+        "target": "xpath=//select[@id='cc-jurisdiction']/option[@value='DIVORCE']",
+        "targets": [
+          ["id=cc-jurisdiction", "id"],
+          ["name=jurisdiction", "name"],
+          ["css=#cc-jurisdiction", "css:finder"],
+          ["xpath=//select[@id='cc-jurisdiction']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/div/exui-ccd-connector/ccd-create-case-filters/form/div/select", "xpath:idRelative"],
+          ["xpath=//select", "xpath:position"]
+        ],
+        "value": "10000"
+      }, {
+        "id": "d2ab5d4b-1394-4d60-9ddd-ccf6bcb07835",
+        "comment": "",
+        "command": "select",
+        "target": "id=cc-jurisdiction",
+        "targets": [],
+        "value": "label=Family Divorce"
+      }, {
+        "id": "4986faab-89b6-41de-b3a1-8c7a2195f726",
+        "comment": "",
+        "command": "click",
+        "target": "id=cc-case-type",
+        "targets": [
+          ["id=cc-case-type", "id"],
+          ["name=case-type", "name"],
+          ["css=#cc-case-type", "css:finder"],
+          ["xpath=//select[@id='cc-case-type']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/div/exui-ccd-connector/ccd-create-case-filters/form/div[2]/select", "xpath:idRelative"],
+          ["xpath=//div[2]/select", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "b16075c8-0512-4be6-95b8-e91d208bac41",
+        "comment": "",
+        "command": "select",
+        "target": "id=cc-case-type",
+        "targets": [],
+        "value": "label=Financial Remedy Consented"
+      }, {
+        "id": "f80fe258-fa84-4c74-82dc-a83f8057b82c",
+        "comment": "",
+        "command": "click",
+        "target": "id=cc-event",
+        "targets": [
+          ["id=cc-event", "id"],
+          ["name=event", "name"],
+          ["css=#cc-event", "css:finder"],
+          ["xpath=//select[@id='cc-event']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/div/exui-ccd-connector/ccd-create-case-filters/form/div[3]/select", "xpath:idRelative"],
+          ["xpath=//div[3]/select", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "db62e04e-b3c1-4c3f-b702-3f548bb386ea",
+        "comment": "",
+        "command": "select",
+        "target": "id=cc-event",
+        "targets": [],
+        "value": "label=Consent Order Application"
+      }, {
+        "id": "1263902f-f9e0-4c1b-8ca0-c20b5a17841e",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Start')]",
+        "targets": [
+          ["css=.form-group > .button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "4b5df3dd-d40b-4fca-aa8f-8b6eec986f19",
+        "comment": "",
+        "command": "waitForElementVisible",
+        "target": "xpath=//h2[contains(.,'Before You Start')]",
+        "targets": [
+          ["css=h2:nth-child(1)", "css:finder"],
+          ["xpath=//dl[@id='beforeYouStart']/dt/ccd-markdown/div/markdown/h2", "xpath:idRelative"],
+          ["xpath=//markdown/h2", "xpath:position"],
+          ["xpath=//h2[contains(.,'Before You Start')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "e0d5fa59-05b5-43e9-971f-6f9664ac650d",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "836fb3d4-b5be-40c0-87a0-2e80bbe9048d",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "728cad8c-d09e-4d99-b4f0-e25c585cc465",
+        "comment": "",
+        "command": "click",
+        "target": "id=solicitorName",
+        "targets": [
+          ["id=applicantSolicitorName", "id"],
+          ["css=#applicantSolicitorName", "css:finder"],
+          ["xpath=//input[@id='applicantSolicitorName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "e6785f15-96be-4df4-b6e6-c72362f4acfa",
+        "comment": "",
+        "command": "type",
+        "target": "id=solicitorName",
+        "targets": [
+          ["id=applicantSolicitorName", "id"],
+          ["css=#applicantSolicitorName", "css:finder"],
+          ["xpath=//input[@id='applicantSolicitorName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "{{applicant-solicitor-name}}"
+      }, {
+        "id": "918cfcc7-2fdb-4f1f-bf08-dd356bec95fc",
+        "comment": "",
+        "command": "click",
+        "target": "id=search-org-text",
+        "targets": [
+          ["id=search-org-text", "id"],
+          ["css=#search-org-text", "css:finder"],
+          ["xpath=//input[@id='search-org-text']", "xpath:attributes"],
+          ["xpath=//div[@id='ApplicantOrganisationPolicy_ApplicantOrganisationPolicy']/fieldset/ccd-field-write[2]/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
+          ["xpath=//fieldset/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "a3f9530b-a42c-4376-9bef-4cc90cc4aa1b",
+        "comment": "",
+        "command": "type",
+        "target": "id=search-org-text",
+        "targets": [
+          ["id=search-org-text", "id"],
+          ["css=#search-org-text", "css:finder"],
+          ["xpath=//input[@id='search-org-text']", "xpath:attributes"],
+          ["xpath=//div[@id='ApplicantOrganisationPolicy_ApplicantOrganisationPolicy']/fieldset/ccd-field-write[2]/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
+          ["xpath=//fieldset/div/input", "xpath:position"]
+        ],
+        "value": "{{applicant-solicitor-organisation}}"
+      }, {
+        "id": "fc1c6692-95f8-4cd0-ab52-f648b37f5a45",
+        "comment": "",
+        "command": "click",
+        "target": "linkText=Select",
+        "targets": [
+          ["linkText=Select", "linkText"],
+          ["css=.td-select > a", "css:finder"],
+          ["xpath=//a[contains(text(),'Select')]", "xpath:link"],
+          ["xpath=//table[@id='organisation-table']/tbody/tr/td[2]/a", "xpath:idRelative"],
+          ["xpath=//a[contains(@href, 'javascript:void(0);')]", "xpath:href"],
+          ["xpath=//td[2]/a", "xpath:position"],
+          ["xpath=//a[contains(.,'Select')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "cb6e7745-f008-4d89-8860-3c42d2ac0b24",
+        "comment": "",
+        "command": "click",
+        "target": "id=solicitorPhone",
+        "targets": [
+          ["id=applicantSolicitorPhone", "id"],
+          ["css=#applicantSolicitorPhone", "css:finder"],
+          ["xpath=//input[@id='applicantSolicitorPhone']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "47c69912-734c-4296-ad72-c1be5dba0b13",
+        "comment": "",
+        "command": "type",
+        "target": "id=solicitorPhone",
+        "targets": [
+          ["id=applicantSolicitorPhone", "id"],
+          ["css=#applicantSolicitorPhone", "css:finder"],
+          ["xpath=//input[@id='applicantSolicitorPhone']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "123"
+      }, {
+        "id": "700c3390-5d0a-4177-9582-a30856d788a7",
+        "comment": "",
+        "command": "click",
+        "target": "id=solicitorEmail",
+        "targets": [
+          ["id=applicantSolicitorEmail", "id"],
+          ["css=#applicantSolicitorEmail", "css:finder"],
+          ["xpath=//input[@id='applicantSolicitorEmail']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "8425c34f-d071-4f01-84d2-c45c613cac19",
+        "comment": "",
+        "command": "type",
+        "target": "id=solicitorEmail",
+        "targets": [
+          ["id=applicantSolicitorEmail", "id"],
+          ["css=#applicantSolicitorEmail", "css:finder"],
+          ["xpath=//input[@id='applicantSolicitorEmail']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:position"]
+        ],
+        "value": "fr_applicant_solicitor1@mailinator.com"
+      }, {
+        "id": "654d44f3-bbae-45c3-9913-b4db40653424",
+        "comment": "",
+        "command": "click",
+        "target": "id=solicitorAgreeToReceiveEmails_Yes",
+        "targets": [
+          ["id=applicantSolicitorConsentForEmails_Yes", "id"],
+          ["name=applicantSolicitorConsentForEmails", "name"],
+          ["css=#applicantSolicitorConsentForEmails_Yes", "css:finder"],
+          ["xpath=//input[@id='applicantSolicitorConsentForEmails_Yes']", "xpath:attributes"],
+          ["xpath=//div[@id='applicantSolicitorConsentForEmails_radio']/div/input", "xpath:idRelative"],
+          ["xpath=//div[13]/ccd-field-write/div/ccd-write-yes-no-field/div/fieldset/div/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "fe021b0d-a2b6-458d-b02c-a7e6daa4d57a",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.form-group > .button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "79dd8699-115a-4780-91c6-0da806a4fd02",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "87064297-6d04-452c-9448-def894fff95a",
+        "comment": "",
+        "command": "click",
+        "target": "id=divorceCaseNumber",
+        "targets": [
+          ["id=divorceCaseNumber", "id"],
+          ["css=#divorceCaseNumber", "css:finder"],
+          ["xpath=//input[@id='divorceCaseNumber']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "47743dc9-80d9-4184-8da8-d2aaabdc642d",
+        "comment": "",
+        "command": "type",
+        "target": "id=divorceCaseNumber",
+        "targets": [
+          ["id=divorceCaseNumber", "id"],
+          ["css=#divorceCaseNumber", "css:finder"],
+          ["xpath=//input[@id='divorceCaseNumber']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": "LV18J81000"
+      }, {
+        "id": "b49625d6-a161-46ca-b8f7-83fc745921c6",
+        "comment": "",
+        "command": "click",
+        "target": "id=divorceStageReached",
+        "targets": [
+          ["id=divorceStageReached", "id"],
+          ["css=#divorceStageReached", "css:finder"],
+          ["xpath=//select[@id='divorceStageReached']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[8]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
+          ["xpath=//select", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "8807ce7e-aba5-470f-b257-ee97154a6306",
+        "comment": "",
+        "command": "select",
+        "target": "id=divorceStageReached",
+        "targets": [],
+        "value": "label=Decree Nisi / Conditional Order"
+      }, {
+        "id": "4cdc1dd8-9055-4e57-8850-475205dd2092",
+        "comment": "",
+        "command": "click",
+        "target": "id=divorceUploadEvidence1",
+        "targets": [
+          ["id=divorceUploadEvidence1", "id"],
+          ["css=#divorceUploadEvidence1", "css:finder"],
+          ["xpath=//input[@id='divorceUploadEvidence1']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "e803e59a-48d7-4b86-87b5-192afe1d1b35",
+        "comment": "",
+        "command": "type",
+        "target": "id=divorceUploadEvidence1",
+        "targets": [
+          ["id=divorceUploadEvidence1", "id"],
+          ["css=#divorceUploadEvidence1", "css:finder"],
+          ["xpath=//input[@id='divorceUploadEvidence1']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
+        ],
+        "value": "{{divorce-evidence-upload-file}}"
+      }, {
+        "id": "824448b6-b9ec-4424-8b57-ff350757729e",
+        "comment": "",
+        "command": "waitForElementNotEditable",
+        "target": "css=button[aria-label=\"Cancel upload\"]",
+        "targets": [
+          ["css=.error-message", "css:finder"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/span", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/span", "xpath:position"],
+          ["xpath=//span[contains(.,'Uploading...')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "d8712274-d190-4a97-86f0-d2a1280e01f1",
+        "comment": "",
+        "command": "click",
+        "target": "id=divorceDecreeNisiDate-day",
+        "targets": [
+          ["id=divorceDecreeNisiDate-day", "id"],
+          ["name=divorceDecreeNisiDate-day", "name"],
+          ["css=#divorceDecreeNisiDate-day", "css:finder"],
+          ["xpath=//input[@id='divorceDecreeNisiDate-day']", "xpath:attributes"],
+          ["xpath=//div[@id='divorceDecreeNisiDate']/fieldset/cut-date-input/div/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-date-container-field/ccd-write-date-field/div/fieldset/cut-date-input/div/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "f4fb269a-3398-4f53-af1c-337285f0c6ac",
+        "comment": "",
+        "command": "type",
+        "target": "id=divorceDecreeNisiDate-day",
+        "targets": [
+          ["id=divorceDecreeNisiDate-day", "id"],
+          ["name=divorceDecreeNisiDate-day", "name"],
+          ["css=#divorceDecreeNisiDate-day", "css:finder"],
+          ["xpath=//input[@id='divorceDecreeNisiDate-day']", "xpath:attributes"],
+          ["xpath=//div[@id='divorceDecreeNisiDate']/fieldset/cut-date-input/div/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-date-container-field/ccd-write-date-field/div/fieldset/cut-date-input/div/div/input", "xpath:position"]
+        ],
+        "value": "01"
+      }, {
+        "id": "c269054f-b3a0-488d-b039-34cb5a6696b6",
+        "comment": "",
+        "command": "type",
+        "target": "id=divorceDecreeNisiDate-month",
+        "targets": [
+          ["id=divorceDecreeNisiDate-month", "id"],
+          ["name=divorceDecreeNisiDate-month", "name"],
+          ["css=#divorceDecreeNisiDate-month", "css:finder"],
+          ["xpath=//input[@id='divorceDecreeNisiDate-month']", "xpath:attributes"],
+          ["xpath=//div[@id='divorceDecreeNisiDate']/fieldset/cut-date-input/div/div[2]/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-date-container-field/ccd-write-date-field/div/fieldset/cut-date-input/div/div[2]/input", "xpath:position"]
+        ],
+        "value": "01"
+      }, {
+        "id": "614809a4-de03-4352-867a-9fc0b6be89a3",
+        "comment": "",
+        "command": "type",
+        "target": "id=divorceDecreeNisiDate-year",
+        "targets": [
+          ["id=divorceDecreeNisiDate-year", "id"],
+          ["name=divorceDecreeNisiDate-year", "name"],
+          ["css=#divorceDecreeNisiDate-year", "css:finder"],
+          ["xpath=//input[@id='divorceDecreeNisiDate-year']", "xpath:attributes"],
+          ["xpath=//div[@id='divorceDecreeNisiDate']/fieldset/cut-date-input/div/div[3]/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-date-container-field/ccd-write-date-field/div/fieldset/cut-date-input/div/div[3]/input", "xpath:position"]
+        ],
+        "value": "2024"
+      }, {
+        "id": "73d7605c-c2a1-433f-88c3-2d4c90bd1219",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[@type='submit']",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "6322c1d9-b040-4571-aa41-9dd8cb55bbbb",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "9e402584-eca7-4527-befd-dd2fb0d2ffd6",
+        "comment": "",
+        "command": "click",
+        "target": "id=applicantFMName",
+        "targets": [
+          ["id=applicantFMName", "id"],
+          ["css=#applicantFMName", "css:finder"],
+          ["xpath=//input[@id='applicantFMName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "92bf02a8-3603-4c3d-9afe-8285c764e0ec",
+        "comment": "",
+        "command": "type",
+        "target": "id=applicantFMName",
+        "targets": [
+          ["id=applicantFMName", "id"],
+          ["css=#applicantFMName", "css:finder"],
+          ["xpath=//input[@id='applicantFMName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": "{{applicant-first-name}}"
+      }, {
+        "id": "1994c1f5-13f6-421b-9f3c-b0621a077455",
+        "comment": "",
+        "command": "type",
+        "target": "id=applicantLName",
+        "targets": [
+          ["id=applicantLName", "id"],
+          ["css=#applicantLName", "css:finder"],
+          ["xpath=//input[@id='applicantLName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "{{applicant-last-name}}"
+      }, {
+        "id": "dbab92a4-2888-4f4c-938b-45f84ebd1691",
+        "comment": "",
+        "command": "click",
+        "target": "id=regionList",
+        "targets": [
+          ["id=regionList", "id"],
+          ["css=#regionList", "css:finder"],
+          ["xpath=//select[@id='regionList']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
+          ["xpath=//select", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "6a926a08-9412-45a8-aa84-94e0e6c430d6",
+        "comment": "",
+        "command": "select",
+        "target": "id=regionList",
+        "targets": [],
+        "value": "label={{local-court-region}}"
+      }, {
+        "id": "c4fb2ad9-cb79-475b-8da7-c5e722996021",
+        "comment": "",
+        "command": "click",
+        "target": "id={{local-court-frc-id}}",
+        "targets": [
+          ["id={{local-court-frc-id}}", "id"],
+          ["css=#{{local-court-frc-id}}", "css:finder"],
+          ["xpath=//select[@id='{{local-court-frc-id}}']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
+          ["xpath=//div[4]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "05c8e00a-9607-455c-b95d-f8c8555fb496",
+        "comment": "",
+        "command": "select",
+        "target": "id={{local-court-frc-id}}",
+        "targets": [],
+        "value": "{{local-court-frc}}"
+      }, {
+        "id": "816e01b9-11e5-4655-a3bd-defafa8533c7",
+        "comment": "",
+        "command": "click",
+        "target": "id={{local-court-id}}",
+        "targets": [
+          ["id={{local-court-id}}", "id"],
+          ["css=#{{local-court-id}}", "css:finder"],
+          ["xpath=//select[@id='{{local-court-id}}']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[17]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
+          ["xpath=//div[17]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "19cd36a3-4d68-4228-a727-2b8060c097b0",
+        "comment": "",
+        "command": "select",
+        "target": "id={{local-court-id}}",
+        "targets": [],
+        "value": "label={{local-court}}"
+      }, {
+        "id": "e41a1853-32f2-4081-99de-878a6fd3b332",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[@type='submit']",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "52ad4593-0154-49c9-87b3-f07139e5c66f",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "173d7481-1819-41c1-942b-72d62db82f74",
+        "comment": "",
+        "command": "click",
+        "target": "id=appRespondentFMName",
+        "targets": [
+          ["id=respondentFMName", "id"],
+          ["css=#respondentFMName", "css:finder"],
+          ["xpath=//input[@id='respondentFMName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "3433622c-4aab-4c27-ad69-53f40c8e6385",
+        "comment": "",
+        "command": "type",
+        "target": "id=appRespondentFMName",
+        "targets": [
+          ["id=respondentFMName", "id"],
+          ["css=#respondentFMName", "css:finder"],
+          ["xpath=//input[@id='respondentFMName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": "{{respondent-first-name}}"
+      }, {
+        "id": "0ef23388-c33c-453f-87c5-fb794946f113",
+        "comment": "",
+        "command": "click",
+        "target": "id=appRespondentLName",
+        "targets": [
+          ["id=respondentLName", "id"],
+          ["css=#respondentLName", "css:finder"],
+          ["xpath=//input[@id='respondentLName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "77e30117-e6bf-491b-9401-78081951f699",
+        "comment": "",
+        "command": "type",
+        "target": "id=appRespondentLName",
+        "targets": [
+          ["id=respondentLName", "id"],
+          ["css=#respondentLName", "css:finder"],
+          ["xpath=//input[@id='respondentLName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "{{respondent-last-name}}"
+      }, {
+        "id": "a0cd2563-8f62-4f65-aa55-2d4e59447956",
+        "comment": "",
+        "command": "click",
+        "target": "id=appRespondentRep_Yes",
+        "targets": [
+          ["id=respondentRepresented_Yes", "id"],
+          ["name=respondentRepresented", "name"],
+          ["css=#respondentRepresented_Yes", "css:finder"],
+          ["xpath=//input[@id='respondentRepresented_Yes']", "xpath:attributes"],
+          ["xpath=//div[@id='respondentRepresented_radio']/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "3187cba1-d917-455f-b91b-e9e92cb6562d",
+        "comment": "",
+        "command": "click",
+        "target": "id=search-org-text",
+        "targets": [
+          ["id=search-org-text", "id"],
+          ["css=#search-org-text", "css:finder"],
+          ["xpath=//input[@id='search-org-text']", "xpath:attributes"],
+          ["xpath=//div[@id='RespondentOrganisationPolicy_RespondentOrganisationPolicy']/fieldset/ccd-field-write/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
+          ["xpath=//fieldset/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "2276bafa-f320-4442-b8b1-d50e496cd529",
+        "comment": "",
+        "command": "type",
+        "target": "id=search-org-text",
+        "targets": [
+          ["id=search-org-text", "id"],
+          ["css=#search-org-text", "css:finder"],
+          ["xpath=//input[@id='search-org-text']", "xpath:attributes"],
+          ["xpath=//div[@id='RespondentOrganisationPolicy_RespondentOrganisationPolicy']/fieldset/ccd-field-write/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
+          ["xpath=//fieldset/div/input", "xpath:position"]
+        ],
+        "value": "{{respondent-solicitor-organisation}}"
+      }, {
+        "id": "fdb3d250-3bee-45f3-80a0-baa45d7e2933",
+        "comment": "",
+        "command": "click",
+        "target": "linkText=Select",
+        "targets": [
+          ["linkText=Select", "linkText"],
+          ["css=.td-select > a", "css:finder"],
+          ["xpath=//a[contains(text(),'Select')]", "xpath:link"],
+          ["xpath=//table[@id='organisation-table']/tbody/tr/td[2]/a", "xpath:idRelative"],
+          ["xpath=//a[contains(@href, 'javascript:void(0);')]", "xpath:href"],
+          ["xpath=//td[2]/a", "xpath:position"],
+          ["xpath=//a[contains(.,'Select')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "bcbf16f3-98b1-4f29-a519-4008581f9e4c",
+        "comment": "",
+        "command": "click",
+        "target": "id=rSolicitorFirm",
+        "targets": [
+          ["id=rSolicitorFirm", "id"],
+          ["css=#rSolicitorFirm", "css:finder"],
+          ["xpath=//input[@id='rSolicitorFirm']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "fc813c33-ff1c-489f-96f1-17dfa2a0fd16",
+        "comment": "",
+        "command": "type",
+        "target": "id=rSolicitorFirm",
+        "targets": [
+          ["id=rSolicitorFirm", "id"],
+          ["css=#rSolicitorFirm", "css:finder"],
+          ["xpath=//input[@id='rSolicitorFirm']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[7]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "Respondent Solicitor Firm"
+      }, {
+        "id": "d632a183-9dfb-4ad4-ae6c-38259f6d7b31",
+        "comment": "",
+        "command": "click",
+        "target": "id=rSolicitorAddress_rSolicitorAddress_postcodeInput",
+        "targets": [
+          ["id=rSolicitorAddress_rSolicitorAddress_postcodeInput", "id"],
+          ["name=postcode", "name"],
+          ["css=#rSolicitorAddress_rSolicitorAddress_postcodeInput", "css:finder"],
+          ["xpath=//input[@id='rSolicitorAddress_rSolicitorAddress_postcodeInput']", "xpath:attributes"],
+          ["xpath=//div[@id='rSolicitorAddress_rSolicitorAddress_postcodeLookup']/input", "xpath:idRelative"],
+          ["xpath=//div/div/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "d73ae8fa-91b7-477c-a6db-0a193616b5dc",
+        "comment": "",
+        "command": "type",
+        "target": "id=rSolicitorAddress_rSolicitorAddress_postcodeInput",
+        "targets": [
+          ["id=rSolicitorAddress_rSolicitorAddress_postcodeInput", "id"],
+          ["name=postcode", "name"],
+          ["css=#rSolicitorAddress_rSolicitorAddress_postcodeInput", "css:finder"],
+          ["xpath=//input[@id='rSolicitorAddress_rSolicitorAddress_postcodeInput']", "xpath:attributes"],
+          ["xpath=//div[@id='rSolicitorAddress_rSolicitorAddress_postcodeLookup']/input", "xpath:idRelative"],
+          ["xpath=//div/div/div/input", "xpath:position"]
+        ],
+        "value": "{{respondent-solicitor-postcode}}"
+      }, {
+        "id": "b3b6f2e4-5331-4c46-b22f-fe3947b52e11",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Find address')]",
+        "targets": [
+          ["css=#rSolicitorAddress_rSolicitorAddress_postcodeLookup > .button", "css:finder"],
+          ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+          ["xpath=//div[@id='rSolicitorAddress_rSolicitorAddress_postcodeLookup']/button", "xpath:idRelative"],
+          ["xpath=//div/div/div/button", "xpath:position"],
+          ["xpath=//button[contains(.,'Find address')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "a939f539-1ba6-45bf-adb2-465fac2d4194",
+        "comment": "",
+        "command": "waitForElementPresent",
+        "target": "xpath=//option[contains(text(),\"s found\")]",
+        "targets": [
+          ["id=applicantAddress_applicantAddress_addressList", "id"],
+          ["name=address", "name"],
+          ["css=#applicantAddress_applicantAddress_addressList", "css:finder"],
+          ["xpath=//select[@id='applicantAddress_applicantAddress_addressList']", "xpath:attributes"],
+          ["xpath=//div[@id='selectAddress']/select", "xpath:idRelative"],
+          ["xpath=//select", "xpath:position"]
+        ],
+        "value": "10000"
+      }, {
+        "id": "cce2faef-948f-428a-8bd4-8faa2a76eae5",
+        "comment": "",
+        "command": "storeText",
+        "target": "xpath=//select[@id='rSolicitorAddress_rSolicitorAddress_addressList']/option[2]",
+        "targets": [],
+        "value": "respondentSolicitorAddress"
+      }, {
+        "id": "61f9be2d-a302-4323-9899-4c3f7f6dd423",
+        "comment": "",
+        "command": "select",
+        "target": "id=rSolicitorAddress_rSolicitorAddress_addressList",
+        "targets": [],
+        "value": "${respondentSolicitorAddress}"
+      }, {
+        "id": "6c2387e7-9aca-4748-85e7-2754bca1826d",
+        "comment": "",
+        "command": "click",
+        "target": "id=rSolicitorName",
+        "targets": [
+          ["id=rSolicitorPhone", "id"],
+          ["css=#rSolicitorPhone", "css:finder"],
+          ["xpath=//input[@id='rSolicitorPhone']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "977e5cd5-30f8-404a-8c40-60f69a9432e3",
+        "comment": "",
+        "command": "type",
+        "target": "id=rSolicitorName",
+        "targets": [
+          ["id=rSolicitorPhone", "id"],
+          ["css=#rSolicitorPhone", "css:finder"],
+          ["xpath=//input[@id='rSolicitorPhone']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "{{respondent-solicitor-name}}"
+      }, {
+        "id": "64cdd9bd-db1f-4560-b617-41a56c7971ba",
+        "comment": "",
+        "command": "click",
+        "target": "id=rSolicitorPhone",
+        "targets": [
+          ["id=rSolicitorPhone", "id"],
+          ["css=#rSolicitorPhone", "css:finder"],
+          ["xpath=//input[@id='rSolicitorPhone']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "60d7233d-e83b-448c-af44-d86bf342d6ce",
+        "comment": "",
+        "command": "type",
+        "target": "id=rSolicitorPhone",
+        "targets": [
+          ["id=rSolicitorPhone", "id"],
+          ["css=#rSolicitorPhone", "css:finder"],
+          ["xpath=//input[@id='rSolicitorPhone']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "123"
+      }, {
+        "id": "ad496390-765a-42f4-8ac5-010282ca1ca2",
+        "comment": "",
+        "command": "click",
+        "target": "id=rSolicitorEmail",
+        "targets": [
+          ["id=rSolicitorEmail", "id"],
+          ["css=#rSolicitorEmail", "css:finder"],
+          ["xpath=//input[@id='rSolicitorEmail']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "a42e49c0-158b-475b-acc4-8552161863d9",
+        "comment": "",
+        "command": "doubleClick",
+        "target": "id=rSolicitorEmail",
+        "targets": [
+          ["id=rSolicitorEmail", "id"],
+          ["css=#rSolicitorEmail", "css:finder"],
+          ["xpath=//input[@id='rSolicitorEmail']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "bc4d19f8-cf30-4d52-9923-d38b41a51822",
+        "comment": "",
+        "command": "type",
+        "target": "id=rSolicitorEmail",
+        "targets": [
+          ["id=rSolicitorEmail", "id"],
+          ["css=#rSolicitorEmail", "css:finder"],
+          ["xpath=//input[@id='rSolicitorEmail']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:position"]
+        ],
+        "value": "{{respondent-solicitor-email}}"
+      }, {
+        "id": "407a358f-211b-4da3-9dcb-8cd9616f1bb6",
+        "comment": "",
+        "command": "click",
+        "target": "css=.form-group > .button:nth-child(2)",
+        "targets": [
+          ["css=.form-group > .button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "1b2c98c6-de8d-46f9-9a05-6f33d0104b97",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "3bfd34ec-1cd8-435a-8b93-3cdbd80ee774",
+        "comment": "",
+        "command": "click",
+        "target": "name=natureOfApplication2",
+        "targets": [
+          ["id=natureOfApplication2-Maintenance Pending Suit", "id"],
+          ["name=natureOfApplication2", "name"],
+          ["css=#natureOfApplication2-Maintenance\\ Pending\\ Suit", "css:finder"],
+          ["xpath=//input[@id='natureOfApplication2-Maintenance Pending Suit']", "xpath:attributes"],
+          ["xpath=//div[@id='natureOfApplication2']/fieldset/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "0c0c9113-0976-4211-947f-13d82be3534f",
+        "comment": "",
+        "command": "click",
+        "target": "css=.button:nth-child(2)",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "8c9d9178-5ae7-4041-9532-07bf80fa7640",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "cf618555-dea6-4a73-a961-4d71be6c0447",
+        "comment": "",
+        "command": "click",
+        "target": "id=consentOrder",
+        "targets": [
+          ["id=divorceUploadEvidence1", "id"],
+          ["css=#divorceUploadEvidence1", "css:finder"],
+          ["xpath=//input[@id='divorceUploadEvidence1']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "8309b3f8-eedd-4a7f-bd95-ab1c274bce99",
+        "comment": "",
+        "command": "type",
+        "target": "id=consentOrder",
+        "targets": [
+          ["id=divorceUploadEvidence1", "id"],
+          ["css=#divorceUploadEvidence1", "css:finder"],
+          ["xpath=//input[@id='divorceUploadEvidence1']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
+        ],
+        "value": "{{divorce-evidence-upload-file}}"
+      }, {
+        "id": "e21fb0f5-5a77-41c0-b730-d13798767591",
+        "comment": "",
+        "command": "waitForElementNotEditable",
+        "target": "css=button[aria-label=\"Cancel upload\"]",
+        "targets": [
+          ["css=.error-message", "css:finder"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/span", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/span", "xpath:position"],
+          ["xpath=//span[contains(.,'Uploading...')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "ca406461-0354-41ca-a4f2-cef93efd7149",
+        "comment": "",
+        "command": "click",
+        "target": "css=.button:nth-child(2)",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "9af46757-37cd-4dc8-b3d4-49078ca3f3f4",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "2b600b8e-86f1-4a6b-a5cd-fe10883bb273",
+        "comment": "",
+        "command": "click",
+        "target": "id=d81Question_Yes",
+        "targets": [
+          ["id=addToComplexityListOfCourts-falseNo", "id"],
+          ["css=#addToComplexityListOfCourts-falseNo", "css:finder"],
+          ["xpath=//input[@id='addToComplexityListOfCourts-falseNo']", "xpath:attributes"],
+          ["xpath=//div[@id='addToComplexityListOfCourts']/fieldset/div[2]/input", "xpath:idRelative"],
+          ["xpath=//div[2]/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "0b72eb35-5a90-4941-9205-de17a83f4705",
+        "comment": "",
+        "command": "pause",
+        "target": "5000",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "8b750011-fabf-4a86-a7ab-baf479baa43f",
+        "comment": "",
+        "command": "click",
+        "target": "id=d81Joint",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "b1c6feba-6b85-4511-9a5a-74f0539835fa",
+        "comment": "",
+        "command": "type",
+        "target": "id=d81Joint",
+        "targets": [
+          ["id=divorceUploadEvidence1", "id"],
+          ["css=#divorceUploadEvidence1", "css:finder"],
+          ["xpath=//input[@id='divorceUploadEvidence1']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
+        ],
+        "value": "{{divorce-evidence-upload-file}}"
+      }, {
+        "id": "2de63855-51d7-4d4e-ad7b-1e4652c4ea89",
+        "comment": "",
+        "command": "waitForElementNotEditable",
+        "target": "css=button[aria-label=\"Cancel upload\"]",
+        "targets": [
+          ["css=.error-message", "css:finder"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/span", "xpath:idRelative"],
+          ["xpath=//ccd-write-document-field/div/span", "xpath:position"],
+          ["xpath=//span[contains(.,'Uploading...')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "f5a02eab-b164-42d7-a0ba-f18fbd0c4223",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+    }, {
+      "id": "da1020e8-32ef-4929-b449-cb9834028357",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//h4[contains(.,'OTHER DOCUMENTS')]",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//dl[@id='otherCollectionL']/dt/ccd-markdown/div/markdown/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'OTHER DOCUMENTS')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+        "id": "efce8ca7-0f69-4fd1-baac-a6c7863bdfdc",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.form-group > .button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-page/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//form/div/button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+    }, {
+      "id": "61d801cc-0a7f-42e4-b792-7ec280d1f743",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//h1[contains(.,'Saving your application')]",
+      "targets": [
+        ["css=.markdown > h1:nth-child(1)", "css:finder"],
+        ["xpath=//dl[@id='createCasePreConfirmationInfoText']/dt/ccd-markdown/div/markdown/h1", "xpath:idRelative"],
+        ["xpath=//markdown/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Saving your application')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+        "id": "40aa6a79-5b30-4075-9858-b836ee4aca59",
+        "comment": "",
+        "command": "click",
+        "target": "css=.button:nth-child(2)",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-submit/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "9eb8c970-b270-4e8f-99b3-4aef5555fe6c",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Submit')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//main[@id='content']/div/exui-ccd-connector/ccd-case-edit/ccd-case-edit-submit/div/form/div/button[2]", "xpath:idRelative"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "982b95a2-8d7c-4f8e-9ee9-c3c9ef0e895c",
+        "comment": "",
+        "command": "waitForElementVisible",
+        "target": "xpath=//button[contains(.,'Go')]",
+        "targets": [
+          ["css=.button", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button", "xpath:position"],
+          ["xpath=//button[contains(.,'Go')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "351b173c-8596-4750-923d-6c668205a4ab",
+        "comment": "",
+        "command": "select",
+        "target": "id=next-step",
+        "targets": [],
+        "value": "label=Case Submission"
+      }, {
+        "id": "8539a3e9-c1c9-4660-afef-65953b59b3c2",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Go')]",
+        "targets": [
+          ["css=.button", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button", "xpath:position"],
+          ["xpath=//button[contains(.,'Go')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "e36c4db2-e49f-4a4e-8cca-6cbaebf54483",
+        "comment": "",
+        "command": "click",
+        "target": "id=authorisationName",
+        "targets": [
+          ["id=authorisationName", "id"],
+          ["css=#authorisationName", "css:finder"],
+          ["xpath=//input[@id='authorisationName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "3ba47b85-eb58-4492-b517-2adc09848590",
+        "comment": "",
+        "command": "type",
+        "target": "id=authorisationName",
+        "targets": [
+          ["id=authorisationName", "id"],
+          ["css=#authorisationName", "css:finder"],
+          ["xpath=//input[@id='authorisationName']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": "{{applicant-solicitor-name}}"
+      }, {
+        "id": "78fe637a-7d51-4d26-ac1d-6dde6b516031",
+        "comment": "",
+        "command": "click",
+        "target": "id=authorisationFirm",
+        "targets": [
+          ["id=solicitorFirm", "id"],
+          ["css=#solicitorFirm", "css:finder"],
+          ["xpath=//input[@id='solicitorFirm']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "298fdd74-0217-428a-a7c8-c392c5821cff",
+        "comment": "",
+        "command": "type",
+        "target": "id=authorisationFirm",
+        "targets": [
+          ["id=solicitorFirm", "id"],
+          ["css=#solicitorFirm", "css:finder"],
+          ["xpath=//input[@id='solicitorFirm']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "Applicant Solicitor Firm"
+      }, {
+        "id": "83d2a20b-6f20-49f6-a989-3519e7841854",
+        "comment": "",
+        "command": "click",
+        "target": "id=authorisation2b",
+        "targets": [
+          ["id=authorisation2b", "id"],
+          ["css=#authorisation2b", "css:finder"],
+          ["xpath=//input[@id='authorisation2b']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[5]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[5]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "c43042ca-882d-4c93-a8c3-86936264b71d",
+        "comment": "",
+        "command": "type",
+        "target": "id=authorisation2b",
+        "targets": [
+          ["id=authorisation2b", "id"],
+          ["css=#authorisation2b", "css:finder"],
+          ["xpath=//input[@id='authorisation2b']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[5]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//div[5]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
+        ],
+        "value": "Teaboy"
+      }, {
+        "id": "03ca52e2-b5b2-4b89-a32b-92c840c6da7a",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "f39f5841-85f0-4ee1-b2ed-01d72a4babbe",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "824582d6-b562-4e0f-b31e-e0617455558d",
+        "comment": "",
+        "command": "click",
+        "target": "id=helpWithFeesQuestion_Yes",
+        "targets": [
+          ["id=helpWithFeesQuestion_Yes", "id"],
+          ["name=helpWithFeesQuestion", "name"],
+          ["css=#helpWithFeesQuestion_Yes", "css:finder"],
+          ["xpath=//input[@id='helpWithFeesQuestion_Yes']", "xpath:attributes"],
+          ["xpath=//div[@id='helpWithFeesQuestion_radio']/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "24562718-3398-4041-a4b1-e184d0e7dfaf",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "6731dafb-8f72-4bfe-ae7b-828df1b34345",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "19dcbb20-0fa6-4546-a8aa-3c13c03e5f06",
+        "comment": "",
+        "command": "click",
+        "target": "id=HWFNumber",
+        "targets": [
+          ["id=HWFNumber", "id"],
+          ["css=#HWFNumber", "css:finder"],
+          ["xpath=//input[@id='HWFNumber']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": ""
+      }, {
+        "id": "bc251db1-f7d2-413a-9168-0c929e296b51",
+        "comment": "",
+        "command": "type",
+        "target": "id=HWFNumber",
+        "targets": [
+          ["id=HWFNumber", "id"],
+          ["css=#HWFNumber", "css:finder"],
+          ["xpath=//input[@id='HWFNumber']", "xpath:attributes"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
+          ["xpath=//input", "xpath:position"]
+        ],
+        "value": "123"
+      }, {
+        "id": "8583c37b-864d-40cf-8e9b-8f3b49e5f190",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "c75c8397-bda5-43f6-9b88-438535f7f574",
+        "comment": "",
+        "command": "waitForElementVisible",
+        "target": "css=.order-summary-title",
+        "targets": [
+          ["css=.order-summary-title", "css:finder"],
+          ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div/ccd-field-write/div/ccd-write-order-summary-field/ccd-read-order-summary-field/div", "xpath:idRelative"],
+          ["xpath=//ccd-read-order-summary-field/div", "xpath:position"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "a2921eb0-f000-4d7f-817f-81a5990223ea",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "579d5fda-a1d0-4160-ac8a-5fde18ec7923",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "3005ae19-b9dd-400b-ab08-9cfa121fca65",
+        "comment": "",
+        "command": "runScript",
+        "target": "window.scrollTo(0,0)",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "cfabcc92-d9ba-46ad-806d-55995e4c16ef",
+        "comment": "",
+        "command": "waitForElementVisible",
+        "target": "xpath=//h1[contains(.,'Sending your application to the Court')]",
+        "targets": [
+          ["css=.markdown > h1:nth-child(1)", "css:finder"],
+          ["xpath=//dl[@id='makePaymentPreConfirmationInfoText']/dt/ccd-markdown/div/markdown/h1", "xpath:idRelative"],
+          ["xpath=//markdown/h1", "xpath:position"],
+          ["xpath=//h1[contains(.,'Sending your application to the Court')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "48c56c81-1bba-4f9a-9ac5-3bd2c1bc3508",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[contains(.,'Continue')]",
+        "targets": [
+          ["css=.button:nth-child(2)", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button[2]", "xpath:position"],
+          ["xpath=//button[contains(.,'Submit')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "c2152c23-ab51-4002-88dd-7cdc76a38d31",
+        "comment": "",
+        "command": "waitForElementVisible",
+        "target": "xpath=//h2[contains(.,'Check your answers')]",
+        "targets": [
+          ["css=.heading-h2", "css:finder"],
+          ["xpath=//form/h2", "xpath:position"],
+          ["xpath=//h2[contains(.,'Check your answers')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "39f4302d-bbcd-434f-aa6c-33996a98066d",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[@type='submit']",
+        "targets": [
+          ["css=.button", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button", "xpath:position"],
+          ["xpath=//button[contains(.,'Close and Return to case details')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "4ce7ea26-8dc7-4690-affd-80e3ff62e9f4",
+        "comment": "",
+        "command": "waitForElementVisible",
+        "target": "xpath=//h1[contains(.,'Application Complete')]",
+        "targets": [
+          ["css=.markdown > h1:nth-child(1)", "css:finder"],
+          ["xpath=//div[@id='confirmation-body']/ccd-markdown/div/markdown/h1", "xpath:idRelative"],
+          ["xpath=//markdown/h1", "xpath:position"],
+          ["xpath=//h1[contains(.,'Application Complete')]", "xpath:innerText"]
+        ],
+        "value": "30000"
+      }, {
+        "id": "c47b56cf-30a7-4c1a-934d-58adea29886b",
+        "comment": "",
+        "command": "click",
+        "target": "xpath=//button[@type='submit']",
+        "targets": [
+          ["css=.button", "css:finder"],
+          ["xpath=//button[@type='submit']", "xpath:attributes"],
+          ["xpath=//button", "xpath:position"],
+          ["xpath=//button[contains(.,'Close and Return to case details')]", "xpath:innerText"]
+        ],
+        "value": ""
+      }, {
+        "id": "4b4958b6-0184-43ce-8802-179595bccd7b",
+        "comment": "",
+        "command": "executeScript",
+        "target": "return document.querySelector('.alert-message').innerText.substr(6,19).replaceAll('-', '')",
+        "targets": [],
+        "value": "caseId"
+      }, {
+        "id": "8320c1a9-803e-4279-82e1-ed97290e2093",
+        "comment": "",
+        "command": "echo",
+        "target": "${caseId}",
+        "targets": [],
+        "value": ""
+      }, {
+        "id": "5fea50a9-e3f0-4666-90aa-f9e23acdbaa0",
+        "comment": "",
+        "command": "executeScript",
+        "target": "alert(${caseId})",
+        "targets": [],
+        "value": ""
+      }]
+    }],
   "suites": [{
     "id": "95a96973-8efa-4cbf-a941-e86a5d85941d",
     "name": "Default Suite",
@@ -1899,6 +3333,6 @@
     "timeout": 300,
     "tests": []
   }],
-  "urls": ["http://localhost:3000/", "https://manage-case.aat.platform.hmcts.net/"],
+  "urls": ["http://localhost:3000/", "https://manage-case.aat.platform.hmcts.net/", "https://manage-case.demo.platform.hmcts.net/", "https://xui-finrem-ccd-definitions-pr-.preview.platform.hmcts.net/"],
   "plugins": []
 }
