@@ -5,7 +5,7 @@
   "url": "http://localhost:3000/",
   "tests": [{
     "id": "e1bcb0c7-2529-4a4b-9523-67b94047312f",
-    "name": "Create Contested",
+    "name": "Create Contested Solicitor",
     "commands": [{
       "id": "de983dee-cb78-4e6e-b5cf-5e495f66bf70",
       "comment": "",
