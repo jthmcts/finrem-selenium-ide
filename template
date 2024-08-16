@@ -2689,7 +2689,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
           ["xpath=//div[10]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
         ],
-        "value": "Tess Tickle"
+        "value": "{{respondent-solicitor-name}}"
       }, {
         "id": "64cdd9bd-db1f-4560-b617-41a56c7971ba",
         "comment": "",
@@ -2923,7 +2923,7 @@
         "id": "f5a02eab-b164-42d7-a0ba-f18fbd0c4223",
         "comment": "",
         "command": "click",
-        "target": "css=.button:nth-child(2)",
+        "target": "xpath=//button[contains(.,'Continue')]",
         "targets": [
           ["css=.button:nth-child(2)", "css:finder"],
           ["xpath=//button[@type='submit']", "xpath:attributes"],
@@ -2932,14 +2932,19 @@
           ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
         ],
         "value": ""
-      }, {
-        "id": "b4ad0134-d241-41dc-805b-b7ac4f65185d",
-        "comment": "",
-        "command": "runScript",
-        "target": "window.scrollTo(0,0)",
-        "targets": [],
-        "value": ""
-      }, {
+    }, {
+      "id": "da1020e8-32ef-4929-b449-cb9834028357",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//h4[contains(.,'OTHER DOCUMENTS')]",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//dl[@id='otherCollectionL']/dt/ccd-markdown/div/markdown/h4", "xpath:idRelative"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'OTHER DOCUMENTS')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
         "id": "efce8ca7-0f69-4fd1-baac-a6c7863bdfdc",
         "comment": "",
         "command": "click",
@@ -2952,14 +2957,19 @@
           ["xpath=//button[contains(.,'Continue')]", "xpath:innerText"]
         ],
         "value": ""
-      }, {
-        "id": "61d801cc-0a7f-42e4-b792-7ec280d1f743",
-        "comment": "",
-        "command": "runScript",
-        "target": "window.scrollTo(0,0)",
-        "targets": [],
-        "value": ""
-      }, {
+    }, {
+      "id": "61d801cc-0a7f-42e4-b792-7ec280d1f743",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//h1[contains(.,'Saving your application')]",
+      "targets": [
+        ["css=.markdown > h1:nth-child(1)", "css:finder"],
+        ["xpath=//dl[@id='createCasePreConfirmationInfoText']/dt/ccd-markdown/div/markdown/h1", "xpath:idRelative"],
+        ["xpath=//markdown/h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Saving your application')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
         "id": "40aa6a79-5b30-4075-9858-b836ee4aca59",
         "comment": "",
         "command": "click",
