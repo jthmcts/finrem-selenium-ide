@@ -19,10 +19,19 @@ Run `init.sh` to generate a Selenium IDE project file.
 You will be prompted to enter some values that will be embedded into the generated file.
 
 ## Using the project file
-1. Log in to Manage Cases as the applicant solicitor who is going to create the case. 
+The project contains the following tests:
+
+| Test                       | Purpose         | Log in as           |
+|----------------------------|-----------------|---------------------|
+| Create Consented Solicitor | Case submission | Applicant solicitor |
+| Create Contested Solicitor | Case submission | Applicant solicitor |
+
+
+1. Log in to Manage Cases with the user who is going to create the case. 
 2. Import the project file using the Selenium IDE browser extension.
-3. Select the appropriate Manage Cases URL from the dropdown list (AAT or localhost)
-4. Click the **Run current test** Play button.
+3. Select the appropriate Manage Cases URL from the dropdown list.
+4. Select the test to run.
+5. Click the **Run current test** Play button.
 
 A new browser window will open and the Selenium IDE will input the values to create a case.
 
