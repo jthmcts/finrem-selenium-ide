@@ -2055,7 +2055,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
           ["xpath=//ccd-write-text-field/div/input", "xpath:position"]
         ],
-        "value": "Lionel Hutz"
+        "value": "{{applicant-solicitor-name}}"
       }, {
         "id": "918cfcc7-2fdb-4f1f-bf08-dd356bec95fc",
         "comment": "",
@@ -2081,7 +2081,7 @@
           ["xpath=//div[@id='ApplicantOrganisationPolicy_ApplicantOrganisationPolicy']/fieldset/ccd-field-write[2]/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
           ["xpath=//fieldset/div/input", "xpath:position"]
         ],
-        "value": "FinRem-1-Org"
+        "value": "{{applicant-solicitor-organisation}}"
       }, {
         "id": "fc1c6692-95f8-4cd0-ab52-f648b37f5a45",
         "comment": "",
@@ -2254,7 +2254,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
           ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
         ],
-        "value": "/Users/james.turnbull/Documents/test.pdf"
+        "value": "{{divorce-evidence-upload-file}}"
       }, {
         "id": "824448b6-b9ec-4424-8b57-ff350757729e",
         "comment": "",
@@ -2368,7 +2368,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
           ["xpath=//input", "xpath:position"]
         ],
-        "value": "Doris"
+        "value": "{{applicant-first-name}}"
       }, {
         "id": "1994c1f5-13f6-421b-9f3c-b0621a077455",
         "comment": "",
@@ -2381,7 +2381,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
           ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
         ],
-        "value": "Duck"
+        "value": "{{applicant-last-name}}"
       }, {
         "id": "dbab92a4-2888-4f4c-938b-45f84ebd1691",
         "comment": "",
@@ -2401,16 +2401,16 @@
         "command": "select",
         "target": "id=regionList",
         "targets": [],
-        "value": "label=North West"
+        "value": "label={{local-court-region}}"
       }, {
         "id": "c4fb2ad9-cb79-475b-8da7-c5e722996021",
         "comment": "",
         "command": "click",
-        "target": "id=northWestFRCList",
+        "target": "id={{local-court-frc-id}}",
         "targets": [
-          ["id=northWestFRCList", "id"],
-          ["css=#northWestFRCList", "css:finder"],
-          ["xpath=//select[@id='northWestFRCList']", "xpath:attributes"],
+          ["id={{local-court-frc-id}}", "id"],
+          ["css=#{{local-court-frc-id}}", "css:finder"],
+          ["xpath=//select[@id='{{local-court-frc-id}}']", "xpath:attributes"],
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[4]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
           ["xpath=//div[4]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:position"]
         ],
@@ -2419,18 +2419,18 @@
         "id": "05c8e00a-9607-455c-b95d-f8c8555fb496",
         "comment": "",
         "command": "select",
-        "target": "id=northWestFRCList",
+        "target": "id={{local-court-frc-id}}",
         "targets": [],
-        "value": "label=Lancashire and Cumbria FRC"
+        "value": "{{local-court-frc}}"
       }, {
         "id": "816e01b9-11e5-4655-a3bd-defafa8533c7",
         "comment": "",
         "command": "click",
-        "target": "id=lancashireCourtList",
+        "target": "id={{local-court-id}}",
         "targets": [
-          ["id=lancashireCourtList", "id"],
-          ["css=#lancashireCourtList", "css:finder"],
-          ["xpath=//select[@id='lancashireCourtList']", "xpath:attributes"],
+          ["id={{local-court-id}}", "id"],
+          ["css=#{{local-court-id}}", "css:finder"],
+          ["xpath=//select[@id='{{local-court-id}}']", "xpath:attributes"],
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[17]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:idRelative"],
           ["xpath=//div[17]/ccd-field-write/div/ccd-write-fixed-list-field/div/select", "xpath:position"]
         ],
@@ -2439,9 +2439,9 @@
         "id": "19cd36a3-4d68-4228-a727-2b8060c097b0",
         "comment": "",
         "command": "select",
-        "target": "id=lancashireCourtList",
+        "target": "id={{local-court-id}}",
         "targets": [],
-        "value": "label=CARLISLE COMBINED COURT"
+        "value": "label={{local-court}}"
       }, {
         "id": "e41a1853-32f2-4081-99de-878a6fd3b332",
         "comment": "",
@@ -2487,7 +2487,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[2]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
           ["xpath=//input", "xpath:position"]
         ],
-        "value": "Davey"
+        "value": "{{respondent-first-name}}"
       }, {
         "id": "0ef23388-c33c-453f-87c5-fb794946f113",
         "comment": "",
@@ -2513,7 +2513,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
           ["xpath=//div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:position"]
         ],
-        "value": "Duck"
+        "value": "{{respondent-last-name}}"
       }, {
         "id": "a0cd2563-8f62-4f65-aa55-2d4e59447956",
         "comment": "",
@@ -2553,7 +2553,7 @@
           ["xpath=//div[@id='RespondentOrganisationPolicy_RespondentOrganisationPolicy']/fieldset/ccd-field-write/div/ccd-write-organisation-field/div/fieldset/div/input", "xpath:idRelative"],
           ["xpath=//fieldset/div/input", "xpath:position"]
         ],
-        "value": "FinRem-2-Org"
+        "value": "{{respondent-solicitor-organisation}}"
       }, {
         "id": "fdb3d250-3bee-45f3-80a0-baa45d7e2933",
         "comment": "",
@@ -2622,7 +2622,7 @@
           ["xpath=//div[@id='rSolicitorAddress_rSolicitorAddress_postcodeLookup']/input", "xpath:idRelative"],
           ["xpath=//div/div/div/input", "xpath:position"]
         ],
-        "value": "NW5 1UN"
+        "value": "{{respondent-solicitor-postcode}}"
       }, {
         "id": "b3b6f2e4-5331-4c46-b22f-fe3947b52e11",
         "comment": "",
@@ -2754,7 +2754,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:idRelative"],
           ["xpath=//div[11]/ccd-field-write/div/ccd-write-email-field/div/input", "xpath:position"]
         ],
-        "value": "fr_respondent_solicitor1@mailinator.com"
+        "value": "{{respondent-solicitor-email}}"
       }, {
         "id": "407a358f-211b-4da3-9dcb-8cd9616f1bb6",
         "comment": "",
@@ -2834,7 +2834,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
           ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
         ],
-        "value": "/Users/james.turnbull/Documents/test.pdf"
+        "value": "{{divorce-evidence-upload-file}}"
       }, {
         "id": "e21fb0f5-5a77-41c0-b730-d13798767591",
         "comment": "",
@@ -2906,7 +2906,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[9]/ccd-field-write/div/ccd-write-document-field/div/div[2]/input", "xpath:idRelative"],
           ["xpath=//ccd-write-document-field/div/div[2]/input", "xpath:position"]
         ],
-        "value": "/Users/james.turnbull/Documents/test.pdf"
+        "value": "{{divorce-evidence-upload-file}}"
       }, {
         "id": "2de63855-51d7-4d4e-ad7b-1e4652c4ea89",
         "comment": "",
@@ -3041,7 +3041,7 @@
           ["xpath=//ccd-case-edit-form[@id='caseEditForm']/div[3]/ccd-field-write/div/ccd-write-text-field/div/input", "xpath:idRelative"],
           ["xpath=//input", "xpath:position"]
         ],
-        "value": "Lionel Hutz"
+        "value": "{{applicant-solicitor-name}}"
       }, {
         "id": "78fe637a-7d51-4d26-ac1d-6dde6b516031",
         "comment": "",
